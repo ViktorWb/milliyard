@@ -21,7 +21,7 @@ public class GravityBody : MonoBehaviour
     Rigidbody rigidBody;
     HashSet<GravityBody> others = new();
 
-    void Start()
+    void Awake()
     {
         rigidBody = GetComponent<Rigidbody>();
         foreach (GameObject obj in SceneManager.GetActiveScene().GetRootGameObjects())
